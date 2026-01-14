@@ -1,11 +1,275 @@
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+@font-face {
+  font-family: Dirtyline;
+  src: url(assets/fonts/Dirtyline\ 36daysoftype\ 2022.otf);
+}
+
+@font-face {
+  font-family: FulcherExtruderight;
+  src: url(assets/fonts/FulcherExtruderight.otf);
+}
+
+@font-face {
+  font-family: Wagon;
+  src: url(assets/fonts/Wagon-ExtraLight.otf);
 }
 
 html,
-body{
-    width: 100%;
-    height: 100%;
+body {
+  width: 100%;
+  height: 100%;
+}
+
+body {
+  display: grid;
+  grid-template-columns: 100%;
+  grid-template-rows: 12% 200% 5%;
+  font-family: Roboto;
+  grid-template-areas:
+    "header"
+    "main"
+    "footer";
+}
+
+header {
+  grid-area: header;
+  display: flex;
+  justify-content: center;
+}
+
+.logo {
+  width: 50%;
+  height: 100%;
+  display: flex;
+  justify-content: start;
+  align-items: center;
+}
+
+.logo p {
+  font-size: 6em;
+  font-family: FulcherExtruderight;
+  padding-left: 20px;
+}
+
+nav {
+  width: 50%;
+  height: 100%;
+  display: flex;
+  justify-content: end;
+  align-items: center;
+  gap: 10px;
+}
+
+nav a {
+  color: black;
+  text-decoration: none;
+  font-size: 1.2em;
+  font-family: Roboto;
+}
+
+nav a:last-child {
+  padding-right: 20px;
+}
+
+nav a:hover {
+  text-decoration: underline;
+}
+
+main {
+  grid-area: main;
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+}
+
+.greetingPage {
+  width: 100%;
+  height: 30%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+ 
+}
+
+.greetingPage-text {
+  text-align: center;
+  font-size: 3em;
+  width: 40%;
+  font-family: Dirtyline;
+}
+.Z-letter {
+  font-size: 1.5em;
+}
+.background {
+  border-radius: 10px;
+  padding: 7px;
+  font-family: FulcherExtruderight;
+}
+
+.aboutOus {
+  height: 60%;
+  padding-top: 70px;
+
+}
+
+.aboutOus h1 {
+  font-family: FulcherExtruderight;
+  font-size: 5em;
+  text-align: center;
+}
+
+.aboutOus-Content {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.aboutOus-Content p {
+  font-size: 1.2em;
+  padding: 0 50px;
+}
+
+.aboutOus-Zletter{
+  font-family: dirtyline;
+  font-size: 3em;
+}
+
+.services {
+  height: 30%;
+  margin-top: 50px;
+}
+
+.services h1 {
+  font-family: FulcherExtruderight;
+  font-size: 5em;
+  text-align: center;
+}
+
+.services-content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  margin-top: 10px;
+}
+
+.services-details {
+  width: 20%;
+  height: 40vh;
+  border: 2px solid black;
+  border-radius: 12px;
+  display: flex;
+  flex-direction: column;
+}
+
+.services-details h2 {
+  font-family: Wagon;
+  font-size: 2.5em;
+  text-align: center;
+  padding-top: 10px;
+  height: 40%;
+    background-color: black;
+  color: white;
+  border: 2px solid white;
+    border-radius: 12px;
+}
+
+.services-content .services-details:first-child h2,
+.services-content .services-details:nth-child(2) h2{
+  padding-top: 40px;
+}
+
+.services-details p {
+  text-align: center;
+  margin-left: 2px;
+  padding: 10px;
+  font-size: 1.6em;
+
+}
+
+.contact {
+  width: 100%;
+  height: 50%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  background-color: black;
+  color: white;
+}
+.contact h1 {
+  font-family: FulcherExtruderight;
+  font-size: 5em;
+  width: 40%;
+}
+
+fieldset {
+  height: 400px;
+  width: 600px;
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  align-items: start;
+  border: 2px solid white;
+  border-radius: 22px;
+  padding-left: 20px;
+}
+
+label {
+  font-size: 1.3em;
+  margin-bottom: 3px;
+  font-weight: bold;
+}
+
+input,
+textarea {
+  font-size: 1.5em;
+  width: 95%;
+  height: 10%;
+  margin-bottom: 20px;
+  padding-left: 10px;
+}
+
+textarea {
+  height: 40%;
+  padding-top: 5px;
+  resize: none;
+}
+.submitBtn {
+  height: 15%;
+  font-family: FulcherExtruderight;
+  font-size: 2em;
+  letter-spacing: 3px;
+  transition: letter-spacing 0.5s ease-in-out;
+}
+
+.submitBtn:hover {
+  letter-spacing: 6px;
+  background-color: royalblue;
+  color: white;
+  transition: all 0.5s ease-in-out;
+}
+
+legend {
+  text-align: right;
+  font-family: FulcherExtruderight;
+  font-size: 3em;
+}
+
+footer {
+  grid-area: footer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+footer p{
+  font-family: dirtyline;
+  font-size: 1.5em;
 }

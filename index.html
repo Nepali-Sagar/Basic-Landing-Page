@@ -1,22 +1,152 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
     <title>Home</title>
-</head>
-<body>
+  </head>
+  <body>
     <header>
-        <nav></nav>
+      <div class="logo">
+        <p>Zxy</p>
+      </div>
+      <nav>
+        <a href="index.html">Home</a>
+        <a href="#service">Services</a>
+        <a href="#about">About Ous</a>
+        <a href="#contact">Contact</a>
+      </nav>
     </header>
 
     <main>
-       
+      <div class="greetingPage">
+        <p class="greetingPage-text">
+          Welcome to <span class="Z-letter">Z</span>xy world.
+          <span
+            style="background-color: blue; color: greenyellow"
+            class="background"
+            >SOLVING PROBLEM</span
+          >
+          and providing
+          <span
+            style="background-color: greenyellow; color: blue"
+            class="background"
+            >STRONG SECURITY</span
+          >
+          is our Work.
+        </p>
+      </div>
+
+      <section id="service" class="services">
+        <h1>Services</h1>
+        <div class="services-content">
+          <section class="services-details">
+            <h2>Website Security & Protection</h2>
+            <p>
+              Identifying vulnerabilities, preventing cyber threats, and
+              protecting websites from unauthorized access and data breaches.
+            </p>
+          </section>
+
+          <section class="services-details">
+            <h2>Full-Stack Web Development</h2>
+            <p>
+              Building secure, scalable websites with clean frontend and backend
+              architecture.
+            </p>
+          </section>
+
+          <section class="services-details">
+            <h2>Problem Analysis & Technical Solutions</h2>
+            <p>
+              Analyzing digital challenges and delivering practical, long-term
+              solutions instead of temporary fixes.
+            </p>
+          </section>
+        </div>
+      </section>
+
+      <section id="about" class="aboutOus">
+        <h1>About Ous</h1>
+        <div class="aboutOus-Content">
+          <p>
+            <span class="aboutOus-Zletter">Z</span>xy Company is a technology-focused organization dedicated to
+            solving complex digital challenges and delivering reliable website
+            security solutions for modern businesses. As the digital world
+            continues to expand, websites have become critical assets, and with
+            that importance comes increased risk. Zxy Company exists to reduce
+            those risks by building secure, stable, and high-performing web
+            platforms that organizations can depend on with confidence.
+          </p>
+          <p>
+            Our work centers on identifying problems before they become threats.
+            We analyze systems, detect vulnerabilities, and implement security
+            measures that protect websites from unauthorized access, data
+            breaches, and malicious attacks. Security is not treated as an
+            afterthought or an optional feature. It is integrated into every
+            stage of development, from planning and design to deployment and
+            long-term maintenance. This approach ensures that our solutions
+            remain effective even as technologies and attack methods evolve.
+          </p>
+          <p>
+            Zxy Company believes that problem-solving is the foundation of good
+            technology. Every project begins with a clear understanding of the
+            client’s challenges, goals, and risks. Rather than applying generic
+            solutions, we develop strategies that address specific needs while
+            maintaining efficiency and scalability. Our team focuses on clean
+            architecture, secure coding practices, and continuous improvement to
+            ensure long-term reliability.
+          </p>
+          <p>
+            In addition to security, we emphasize performance and usability. A
+            secure website must also be fast, accessible, and easy to maintain.
+            By balancing protection with functionality, we help businesses
+            create digital platforms that serve users effectively without
+            compromising safety. Our solutions are designed to support growth,
+            adapt to change, and withstand real-world demands.
+          </p>
+          <p>
+            At Zxy Company, trust is built through consistency, transparency,
+            and results. We are committed to delivering solutions that meet high
+            technical standards while remaining practical and sustainable. By
+            combining technical expertise, disciplined problem-solving, and a
+            security-first mindset, Zxy Company helps organizations protect
+            their digital presence and operate confidently in an increasingly
+            connected world.
+          </p>
+        </div>
+      </section>
+
+      <section id="contact" class="contact">
+        <h1>Let's Code Together.</h1>
+        <form action="">
+          <fieldset>
+            <legend>Contact Details</legend>
+
+            <label for="name">Name</label>
+            <input type="text" />
+
+            <label for="email">Gmail</label>
+            <input type="email" />
+
+            <label for="message">Message</label>
+            <textarea name="" id=""></textarea>
+
+            <input class="submitBtn" type="submit" value="Send" />
+          </fieldset>
+        </form>
+      </section>
     </main>
 
     <footer>
-
+      <p>Sagar Nepali</p>
     </footer>
-</body>
+  </body>
 </html>
