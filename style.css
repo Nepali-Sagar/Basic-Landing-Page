@@ -28,7 +28,7 @@ body {
 body {
   display: grid;
   grid-template-columns: 100%;
-  grid-template-rows: 12% 200% 5%;
+  grid-template-rows: auto 1fr auto;
   font-family: Roboto;
   grid-template-areas:
     "header"
@@ -82,19 +82,14 @@ nav a:hover {
 
 main {
   grid-area: main;
-  display: flex;
-  flex-direction: column;
-  justify-content: start;
 }
 
 .greetingPage {
-  width: 100%;
-  height: 30%;
+  min-height: 88vh;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
- 
 }
 
 .greetingPage-text {
@@ -113,9 +108,7 @@ main {
 }
 
 .aboutOus {
-  height: 60%;
-  padding-top: 70px;
-
+  min-height: 100vh;
 }
 
 .aboutOus h1 {
@@ -127,22 +120,34 @@ main {
 .aboutOus-Content {
   display: flex;
   flex-direction: column;
-  gap: 10px;
+  gap: 20px;
+    padding: 20px;
 }
 
-.aboutOus-Content p {
-  font-size: 1.2em;
-  padding: 0 50px;
+.aboutOus-Content section h2{
+    font-family: FulcherExtruderight;
+  font-size: 2em;
 }
 
-.aboutOus-Zletter{
-  font-family: dirtyline;
-  font-size: 3em;
+.aboutOus-Content section p{
+  font-size: 1.5em;
+  margin-top: 5px;
+  font-weight: lighter;
+  line-height: 1.5;
+}
+
+.bold-text{
+  font-weight: bolder;
+  background-color: royalblue;
+  color: white;
+  padding: 5px;
 }
 
 .services {
-  height: 30%;
-  margin-top: 50px;
+  min-height: 60vh;
+  background-color: black;
+  color: white;
+  padding-top: 50px;
 }
 
 .services h1 {
@@ -156,12 +161,13 @@ main {
   justify-content: center;
   align-items: center;
   gap: 10px;
+  flex-wrap: wrap;
   margin-top: 10px;
 }
 
 .services-details {
-  width: 20%;
-  height: 40vh;
+  width: 30vw;
+  height: 50vh;
   border: 2px solid black;
   border-radius: 12px;
   display: flex;
@@ -173,29 +179,23 @@ main {
   font-size: 2.5em;
   text-align: center;
   padding-top: 10px;
-  height: 40%;
-    background-color: black;
-  color: white;
-  border: 2px solid white;
-    border-radius: 12px;
-}
-
-.services-content .services-details:first-child h2,
-.services-content .services-details:nth-child(2) h2{
-  padding-top: 40px;
+  height: 50%;
+  background-color: white;
+  color: black;
+  border-radius: 12px;
+  padding: 70px 5px;
 }
 
 .services-details p {
-  text-align: center;
+  text-align: left;
   margin-left: 2px;
   padding: 10px;
   font-size: 1.6em;
-
 }
 
 .contact {
   width: 100%;
-  height: 50%;
+  min-height: 100vh;
   display: flex;
   flex-direction: row;
   justify-content: center;
@@ -206,12 +206,12 @@ main {
 .contact h1 {
   font-family: FulcherExtruderight;
   font-size: 5em;
-  width: 40%;
+  width: 500px;
 }
 
 fieldset {
-  height: 400px;
-  width: 600px;
+  height: 700px;
+  width: 500px;
   display: flex;
   flex-direction: column;
   justify-content: start;
@@ -221,7 +221,7 @@ fieldset {
   padding-left: 20px;
 }
 
-label {
+legend {
   font-size: 1.3em;
   margin-bottom: 3px;
   font-weight: bold;
@@ -237,7 +237,7 @@ textarea {
 }
 
 textarea {
-  height: 40%;
+  height: 50%;
   padding-top: 5px;
   resize: none;
 }
@@ -269,7 +269,89 @@ footer {
   align-items: center;
 }
 
-footer p{
+footer p {
   font-family: dirtyline;
   font-size: 1.5em;
+}
+
+@media (max-width: 1000px) {
+  .greetingPage-text{
+    width: 50%;
+  }
+
+  .services-details h2{
+    font-size: 2em;
+  }
+
+  .services-details p{
+    font-size: 1.2em;
+  }
+
+  .aboutOus-Content section p{
+    font-size: 1.2em;
+  }
+
+  .bold-text{
+  font-weight: bold;
+  background-color: lightseagreen;
+  }
+
+  .contact {
+    flex-direction: column;
+    gap: 50px;
+  }
+
+  .contact h1{
+    text-align: center;
+    font-size: 4em;
+  }
+}
+
+@media (max-width: 500px) {
+    .greetingPage-text{
+    width: 90%;
+    font-size: 4em;
+  }
+  .services {
+    padding-top: 10px;
+  }
+  .services-content{
+    flex-direction: column;
+    gap: 1px;
+  }
+  .services-details{
+    width: 90%;
+    height: 13vh;
+  }
+
+  .services-details h2{
+    height: 30%;
+    font-size: 1.2em;
+    padding: 13px 5px;
+  }
+
+  .aboutOus h1,
+  .services h1,
+  .contact h1{
+    font-size: 3em;
+  }
+
+  .contact h1{
+    width: auto;
+  }
+
+  fieldset {
+    width: 400px;
+  }
+
+  legend {
+    font-size: 2em;
+  }
+
+  input,
+textarea{
+ 
+  font-size: 1em;
+}
+
 }
